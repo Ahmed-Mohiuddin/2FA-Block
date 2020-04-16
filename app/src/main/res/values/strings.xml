@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">2FA-Block</string>
+<!--    <string name="app_name">2FA</string>-->
+    <string name="title_activity_scanpage">Scanpage</string>
+    <string name="scan">Scan QR</string>
+    <string name="imei">Know Your IMEI</string>
+    <string name="imeino">Your IMEI number is</string>
+</resources>

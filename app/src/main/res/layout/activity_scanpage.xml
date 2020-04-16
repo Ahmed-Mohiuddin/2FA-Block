@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+
+    android:background="#f9f9d7">
+
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/imei"
+        android:layout_gravity="center"
+        android:layout_marginTop="92dp"
+        android:layout_weight="0.21"
+        android:background="#d3b1fa"
+        android:layoutDirection="ltr"
+        android:text="@string/scan"
+        android:textColor="#002132"
+        android:textSize="30dp"
+        android:layout_alignLeft="@+id/imei" />
+
+    <TextView
+        android:id="@+id/tvresult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/scan"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="31dp"
+        android:text="Result will be here"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="23dp" />
+
+    <Button
+        android:id="@+id/imei"
+        android:layout_width="270dp"
+        android:layout_height="50dp"
+        android:layout_weight="0.21"
+        android:background="#c2c2c2"
+        android:text="@string/imei"
+        android:textColor="#002132"
+        android:textSize="30dp"
+        android:layout_marginTop="165dp"
+        android:layout_below="@+id/scan"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
