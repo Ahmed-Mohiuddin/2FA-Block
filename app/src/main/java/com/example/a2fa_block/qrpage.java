@@ -52,7 +52,7 @@ public class qrpage extends AppCompatActivity implements ZBarScannerView.ResultH
         try {
             c = new Crypto("D4:6E:AC:3F:F0:BE");
             String decrStr = c.decrypt(result.getContents());
-            String ims = decrStr.substring(0, 15);
+            String ims = decrStr.substring(0, 16);
 
             TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
             final int REQUEST_CODE = 101;
@@ -66,7 +66,7 @@ public class qrpage extends AppCompatActivity implements ZBarScannerView.ResultH
 
             if(IMEINumber.equals(ims))
             {
-                String code=decrStr.substring(15,19);
+                String code=decrStr.substring(16,20);
                 Scanpage.tvresult.setText(code);
             }
             else
