@@ -4,7 +4,7 @@ $password=$_POST['password'];
 $repassword=$_POST['repassword'];
 $phone=$_POST['phone'];
 $imeinumber=$_POST['imei'];
-echo "Pwd : ".$password.", Rpwd: ".$repassword;
+
 if($name=="")
 echo "Please Enter Name";
 elseif(!ctype_alpha($name))

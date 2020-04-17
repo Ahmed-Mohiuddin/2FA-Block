@@ -1,5 +1,6 @@
 <?php
-require  'qr.class.php';
+// require  'qr.class.php';
+require  'QRCode.php';
 $name=$_POST['name'];
 $password=$_POST['password'];
 $dbname="project";
@@ -10,7 +11,7 @@ $pass="";
 $link=mysqli_connect($hostname,$username,$pass,$dbname);
 if(!$link)
   die('could not connect'.mysql_error());
-  echo "connected";
+
   $query="SELECT `imei` FROM `final` WHERE Name='$name' and password='$password'";
   $result = $link->query($query);
   if ($result->num_rows > 0) {
@@ -37,7 +38,6 @@ if(!$link)
   $cyper_text = mcrypt_generic($td,$en);
   mcrypt_generic_deinit($td);
   mcrypt_module_close($td);
-  echo bin2hex($cyper_text);
   $encrypt=bin2hex($cyper_text);
   $oQRC = new QRCode;
   $oQRC->data($encrypt);
@@ -49,8 +49,10 @@ if(!$link)
     echo "Invalid password";
   }
 ?>
-<form action=result.php method="post">
-  4 digit code <input type="text" name="code">
+</br>
+<form action="result.php" method="post">
+  <label>4 digit code </label><input type="text" name="code">
   <input type="hidden" name="ran" value="<?php echo $ran ?>" />
   <input type="submit" value="submit">
-</form>
+  </form>
+
